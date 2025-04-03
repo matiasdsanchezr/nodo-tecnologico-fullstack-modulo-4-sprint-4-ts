@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({
     >
       <div className="w-full max-w-6xl flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <h1 className="font-['Orbitron'] text-3xl font-bold tracking-tighter text-white drop-shadow-md">
+          <h1 className="font-['Orbitron'] text-xl sm:text-3xl font-bold tracking-tighter text-white drop-shadow-md">
             {title}
             <span className="text-yellow-300 dark:text-accent-teal animate-pulse">.</span>
           </h1>

@@ -4,6 +4,7 @@ import { useFavorites } from "../../hooks/useFavorites";
 
 export type RickAndMortyData = ReturnType<typeof useRickAndMorty>;
 export type FavoritesData = ReturnType<typeof useFavorites>;
+
 export interface CharactersContextType extends RickAndMortyData, FavoritesData {}
 
 export const CharactersContext = createContext<CharactersContextType | undefined>(

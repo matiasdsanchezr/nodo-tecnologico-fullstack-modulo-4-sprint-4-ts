@@ -76,7 +76,11 @@ export const Home = () => {
     <>
       <ToastContainer />
       <Header onShowFavorites={handleShowFavorites} />
-      <main className="flex-1 flex flex-col px-1 sm:px-3 text-black dark:text-white">
+      <main
+        className={`flex-1 flex flex-col px-1 sm:px-3 text-black dark:text-white ${
+          isModalOpen ? "fixed" : ""
+        }`}
+      >
         <FavoritesModal isModalOpen={isModalOpen} onCloseModal={handleCloseFavorites} />
 
         <div className="mx-auto p-3" id="filters">

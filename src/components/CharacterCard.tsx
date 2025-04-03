@@ -31,7 +31,7 @@ export const CharacterCard = ({ character, onClick }: CharacterCardProps) => {
 
   return (
     <div
-      className="border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 text-white max-w-80"
+      className="border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 text-white max-w-sm"
       onClick={() => {
         onClick?.(character);
       }}
@@ -61,12 +61,12 @@ export const CharacterCard = ({ character, onClick }: CharacterCardProps) => {
         <div className="grid gap-1 mt-2">
           <div className="grid grid-cols-2 text-sm border-b border-gray-700 py-1">
             <span className="text-gray-400">Origen:</span>
-            <span className="truncate">{character.origin.name}</span>
+            <span>{character.origin.name}</span>
           </div>
 
           <div className="grid grid-cols-2 text-sm border-b border-gray-700 py-1">
             <span className="text-gray-400">Ubicación:</span>
-            <span className="truncate">{character.location.name}</span>
+            <span>{character.location.name}</span>
           </div>
 
           <div className="grid grid-cols-2 text-sm border-b border-gray-700 py-1">
@@ -82,7 +82,7 @@ export const CharacterCard = ({ character, onClick }: CharacterCardProps) => {
           {character.type && (
             <div className="grid grid-cols-2 text-sm border-b border-gray-700 py-1">
               <span className="text-gray-400">Tipo:</span>
-              <span className="truncate">{character.type}</span>
+              <span>{character.type}</span>
             </div>
           )}
 
@@ -92,7 +92,7 @@ export const CharacterCard = ({ character, onClick }: CharacterCardProps) => {
           </div>
         </div>
 
-        <div>
+        <div className="flex justify-center mt-2">
           {isFavorite(character.id) ? (
             <button type="button" className="button" disabled>
               Registrado en favoritos
